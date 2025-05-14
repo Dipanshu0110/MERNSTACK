@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assignment4.css">
+</head>
+<body><div> 
+    <label for="in1">Name</label>
+    <input type="text" id="in1">
+    <br><br>
+    <label for="in2">Address</label>
+    <input type="text" id="in2">
+    <br><br>
+    <label for="in3"> Course</label>
+    <input type="text" id="in3">
+    <br><br>
+    <label for="rd1">Gender</label>
+    <input type="radio" id="rd1" name="gen" value="male">
+    <label for="male">male</label>
+    <input type="radio" id="rd2" name="gen" value="female">
+    <label for="rd1">Female</label>
+    <br><br>
+    <label for="b2">Blood Group</label>
+    <input type="text" id="b2">
+    <br><br>
+    <label for="c1">Contact </label>
+    <input type="text" id="c1">
+    <br><br>
+    <button onclick="generateIDCard()">Generate id card</button>
+
+</div>
+<div id="idCard">
+    <h3>Student ID card</h3>
+    <p class="info" id="nameDisplay"></p>
+    <p class="info" id="addressDisplay"></p>
+    <p class="info" id="courseDisplay"></p>
+    <p class="info" id="genderDisplay"></p>
+    <p class="info" id="bloodDisplay"></p>
+    <p class="info" id="contactDisplay"></p>
+
+</div>
+<script src="assignment4.js"></script>
+  
+</body>
+</html>
