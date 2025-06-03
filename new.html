@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>SIMPLE CALCULATOR</h1>
+    <div class="calculator">
+        <label for="btn1 ">Number 1:</label>
+        <input type="text" id="btn1" placeholder="Enter first number ">
+        <br><br>
+        <label for="btn2">Number 2:</label>
+        <input type="text" id="btn2" placeholder="Enter second number ">
+        <br><br>
+        <input type="text"  id="result" placeholder="result" >
+        <br><br>
+        <button type="button" id="add">+</button>
+        <button type="button" id="sub">-</button>
+        <button type="button" id="mul">*</button>
+        <button type="button" id="div">/</button>
+        <button type="button" onclick="reset()" id="reset">Reset</button>
+
+        
+
+    </div>
+
+    <script>
+        let input1=document.getElementById("btn1");
+        let input2=document.getElementById("btn2");
+        let result=document.getElementById("result");
+        function reset(){
+            input1.value="";
+            input2.value="";
+            result.value="";
+        }
+        document.getElementById("add").onclick=function(){
+            result.value=Number(input1.value)+Number(input2.value);
+            console.log(result.value);
+        };
+        document.getElementById("sub").onclick=function(){
+            result.value=Number(input1.value)-Number(input2.value);
+        };
+        
+        document.getElementById("mul").onclick=function(){
+            result.value=Number(input1.value)*Number(input2.value);
+        };
+        
+        document.getElementById("sub").onclick=function(){
+            if(input1.value==0){
+                result.value="divsion cant be done";
+            }
+            else{
+            result.value=Number(input1.value)/Number(input2.value);
+            }
+        };
+    </script>
+</body>
+</html>
